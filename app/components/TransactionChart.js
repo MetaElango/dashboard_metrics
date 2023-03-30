@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 
@@ -154,7 +156,6 @@ const data = {
         "2023-03-28",
         "2023-03-27",
         "2023-03-26",
-        "2023-03-25",
         "2023-03-24",
         "2023-03-23",
         "2023-03-22",

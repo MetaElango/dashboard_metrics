@@ -27,8 +27,8 @@ import { ReactText } from "react";
 import TransactionMetrics from "./TransactionMetrics";
 
 const LinkItems = [
-  { name: "Home", icon: FiHome },
-  { name: "Trending", icon: FiTrendingUp },
+  { name: "Transactions", icon: FiHome },
+  { name: "Website visits", icon: FiTrendingUp },
   { name: "Explore", icon: FiCompass },
   { name: "Favourites", icon: FiStar },
   { name: "Settings", icon: FiSettings },
