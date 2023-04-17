@@ -31,7 +31,7 @@ const unwantedAccounts = [
   "vishakha.gondaliya27@gmail.com",
 ];
 export default function TransactionChart() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [investments, setInvestments] = useState([]);
   const [withdrawals, setWithdrawals] = useState([]);
   const [rbs, setRbs] = useState([]);

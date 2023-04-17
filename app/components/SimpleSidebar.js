@@ -27,11 +27,11 @@ import { ReactText } from "react";
 import TransactionMetrics from "./TransactionMetrics";
 
 const LinkItems = [
-  { name: "Transactions", icon: FiHome },
-  { name: "Website visits", icon: FiTrendingUp },
-  { name: "Explore", icon: FiCompass },
-  { name: "Favourites", icon: FiStar },
-  { name: "Settings", icon: FiSettings },
+  { name: "Transactions", icon: FiHome, link: "/" },
+  { name: "Website visits", icon: FiTrendingUp, link: "/social" },
+  // { name: "Explore", icon: FiCompass, link: "#" },
+  // { name: "Favourites", icon: FiStar, link: "#" },
+  // { name: "Settings", icon: FiSettings, link: "#" },
 ];
 
 export default function SimpleSidebar({ children }) {
@@ -83,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} link={link.link}>
           {link.name}
         </NavItem>
       ))}
@@ -91,10 +91,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
   );
 };
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ link, icon, children, ...rest }) => {
   return (
     <Link
-      href="#"
+      href={link}
       style={{ textDecoration: "none" }}
       _focus={{ boxShadow: "none" }}
     >
